@@ -512,27 +512,18 @@
     opacity: 1;
 }
 
-.tag {
-     position: absolute;
-    bottom: 0.75rem;
-    left: 0.75rem;
-    margin: 0;
-    z-index: 2;
+.article .tag {
+    display: inline-block;
 
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 0.4rem;
-    text-align: bottom;
+    padding: 0.2rem 0.5rem;
 
+    background: #3b4566;
+    border: 1px solid #7865a8;
+    border-radius: 4px;
 
+    color: #e8e1d5;
 
-    height: 25.32px;
-    width: 68.73px;
-
-    opacity: 0.95;
-    font-weight: 500;
+    font-size: 0.75rem;
 }
 
 
