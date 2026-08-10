@@ -8,12 +8,12 @@
     "tags": ["reviews"]
   },
   {
-    "title": "Using the Grid Layout",
-    "description": "Learn how this 3-column layout works responsively.",
+    "title": "Librarian: Tidy Up the Arcane Library! Review",
+    "description": "A review of ArtRising's first game.",
     "image": "images/article2.jpg",
-    "link": "articles/article2.html",
-    "date" : "2024-09-15",
-    "tags": ["guides"]
+    "link": "/posts/reviews/review-articles/librarian-clean-up-the-arcane-library-review.html",
+    "date" : "2026-08-10",
+    "tags": ["reviews"]
   },
   {
     "title": "Deploying on Netlify",
