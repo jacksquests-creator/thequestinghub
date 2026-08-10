@@ -1,92 +1,529 @@
-/* ==========================
+/* =========================================================
+   THE QUESTING HUB
    ARTICLE PAGE
-   ========================== */
+   ========================================================= */
+
+
+/* =========================================================
+   ARTICLE TITLE
+   ========================================================= */
 
 .title {
-  max-width: 800px;
-  margin: 2em auto;
-  text-align: center;
-}
-.title .subtitle {
-  font-style: italic;
-  color: #787575a2;
+    box-sizing: border-box;
+
+    width: 100%;
+    max-width: 800px;
+
+    margin: 2rem auto;
+    padding: 1.5rem 2rem 2rem;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(199, 168, 131, 0.04),
+            rgba(120, 101, 168, 0.05)
+        ),
+        #11172a;
+
+    border-top: 1px solid #c7a883;
+    border-bottom: 1px solid #c7a883;
+
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
+
+/* Main article title */
+
+.title h1 {
+    margin-top: 1rem;
+    margin-bottom: 0.75rem;
+
+    color: #f3eadc;
+
+    font-size: clamp(2rem, 4vw, 3rem);
+    line-height: 1.2;
+}
+
+
+/* Subtitle */
+
+.title .subtitle {
+    margin: 0 auto;
+
+    color: #aaa6a0;
+
+    font-style: italic;
+    line-height: 1.6;
+}
+
+.title .subtitle h2 {
+    margin: 0.5rem auto;
+
+    color: #aaa6a0;
+
+    font-size: clamp(1rem, 2vw, 1.3rem);
+    font-weight: normal;
+}
+
+
+/* =========================================================
+   POST META
+   ========================================================= */
+
 .post-meta {
-  font-size: 0.95rem;
-  color: #555;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  border-top: 1px solid #c7a883; /* optional line like your image */
-  padding-top: 0.75rem;
+    box-sizing: border-box;
+
+    width: 100%;
+    max-width: 800px;
+
+    margin: 1.5rem auto;
+    padding: 0.75rem 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 0.6rem;
+
+    font-size: 0.85rem;
+
+    color: #aaa6a0;
+
+    border-top: 1px solid #3b4566;
+    border-bottom: 1px solid #3b4566;
+}
+
+.post-meta .author {
+    color: #c7a883;
 }
 
 .post-meta .separator {
-  color: #999;
+    color: #7865a8;
 }
 
-/* Article content blocks */
-.body, .quick-review {
-  padding: 0 1rem;
-  background: #1f1d2e;
-  border: 1px solid #45a29e;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(178, 148, 255, 0.3);
-  margin: 0 auto;
-     flex: 0 1 800px; /* lock content width */
+.post-meta .date {
+    color: #aaa6a0;
 }
 
-/* Page layout */
-.page-layout {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-   width: 100%;
-  gap: 2rem;
-  padding: 1rem;
-  position: relative;
-  flex-wrap: nowrap;
+
+/* =========================================================
+   ARTICLE CONTENT PANELS
+   ========================================================= */
+
+/*
+   Each .body represents a section of the article.
+
+   The idea is to make each section feel like a page/panel
+   inside an archive rather than a generic web container.
+*/
+
+.body,
+.quick-review {
+    box-sizing: border-box;
+
+    width: 100%;
+    max-width: 800px;
+
+    margin: 1.5rem auto;
+    padding: 1.5rem 2rem;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(120, 101, 168, 0.07),
+            rgba(11, 16, 32, 0.12)
+        ),
+        #171d32;
+
+    border: 1px solid #3b4566;
+    border-left: 3px solid #7865a8;
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.25);
+
+    color: #e8e1d5;
 }
 
-.page-layout main {
 
-  max-width: 800px;
-  margin: 0 auto;
+/* =========================================================
+   ARTICLE HEADINGS
+   ========================================================= */
+
+.body h3 {
+    margin-top: 0.5rem;
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.6rem;
+
+    color: #f3eadc;
+
+    border-bottom: 1px solid #3b4566;
 }
-.content {
-  flex: 1;
-  margin: 0 auto;
-  max-width: 800px;
+
+.body h4 {
+    margin-top: 2rem;
+    margin-bottom: 0.75rem;
+
+    color: #c7a883;
 }
+
+
+/* =========================================================
+   ARTICLE PARAGRAPHS
+   ========================================================= */
+
+.body p {
+    margin: 0 0 1.25rem;
+
+    color: #e8e1d5;
+
+    line-height: 1.75;
+}
+
+.body p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   QUICK REVIEW
+   ========================================================= */
+
+.quick-review {
+    background:
+        linear-gradient(
+            135deg,
+            rgba(199, 168, 131, 0.08),
+            rgba(120, 101, 168, 0.08)
+        ),
+        #171d32;
+
+    border: 1px solid #7865a8;
+    border-left: 4px solid #c7a883;
+
+    box-shadow:
+        0 0 20px rgba(120, 101, 168, 0.12);
+}
+
+.quick-review p {
+    margin: 0;
+}
+
+.quick-review strong {
+    color: #c7a883;
+    font-size: 1.4rem;
+}
+
+
+/* =========================================================
+   ARTICLE LISTS
+   ========================================================= */
+
+.body ul,
+.body ol {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.body li {
+    color: #e8e1d5;
+}
+
+
+/* =========================================================
+   ARTICLE IMAGES
+   ========================================================= */
+
+.body figure {
+    margin: 2rem auto;
+}
+
+.body figure img,
+.body figure video {
+    border: 1px solid #3b4566;
+
+    box-shadow:
+        0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+
+/* =========================================================
+   IMAGE CAPTIONS
+   ========================================================= */
+
+.body figcaption {
+    color: #aaa6a0;
+}
+
+
+/* =========================================================
+   BESTIARY / ARTICLE CARDS
+   ========================================================= */
+
+.card-container {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(180px, 1fr));
+
+    gap: 1rem;
+
+    margin: 2rem 0;
+}
+
+
+/* Individual card */
+
+.card {
+    overflow: hidden;
+
+    background: #11172a;
+
+    border: 1px solid #3b4566;
+    border-radius: 8px;
+
+    box-shadow:
+        0 6px 18px rgba(0, 0, 0, 0.3);
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+/* Card hover */
+
+.card:hover {
+    transform: translateY(-3px);
+
+    border-color: #7865a8;
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.4),
+        0 0 15px rgba(120, 101, 168, 0.08);
+}
+
+
+/* Card title */
+
+.card-header {
+    padding: 0.75rem;
+
+    background: #171d32;
+
+    color: #c7a883;
+
+    text-align: center;
+    font-weight: bold;
+
+    letter-spacing: 0.05em;
+
+    border-bottom: 1px solid #3b4566;
+}
+
+
+/* Card image */
+
+.card-image {
+    background: #0b1020;
+}
+
+.card-image img {
+    width: 100%;
+    height: auto;
+
+    border-radius: 0;
+}
+
+
+/* Card flavour text */
+
+.card-text {
+    box-sizing: border-box;
+
+    padding: 1rem;
+
+    background: #11172a;
+
+    color: #d8d2c8;
+}
+
+.card-text p {
+    margin: 0;
+
+    color: #d8d2c8;
+
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   FINAL VERDICT
+   ========================================================= */
+
+/*
+   The final .body in your article contains the verdict.
+   This gives it slightly more importance without requiring
+   a new HTML class.
+*/
+
+.body:last-of-type {
+    border-left-color: #c7a883;
+}
+
+
+/* Rating */
+
+.body:last-of-type h5 {
+    display: inline-block;
+
+    margin: 1rem 0 0.25rem;
+
+    color: #c7a883;
+}
+
+
+/* =========================================================
+   CONTENT SIDEBAR
+   ========================================================= */
+
 .content-sidebar {
-  flex: 0 0 300px;
-  position: sticky;
-  top: 100px;
-  align-self: flex-start;
-  height: fit-content;
+    box-sizing: border-box;
+
+    flex: 0 0 300px;
+
+    position: sticky;
+    top: 100px;
+
+    align-self: flex-start;
+
+    height: fit-content;
 }
+
+
+/* Sidebar container */
+
+.content-sidebar-inner {
+    box-sizing: border-box;
+
+    padding: 1rem;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(120, 101, 168, 0.06),
+            rgba(11, 16, 32, 0.1)
+        ),
+        #11172a;
+
+    border: 1px solid #3b4566;
+    border-top: 2px solid #c7a883;
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.25);
+}
+
+
+/* Sidebar heading */
+
+.content-sidebar h2 {
+    margin-top: 0.25rem;
+    margin-bottom: 1rem;
+
+    color: #f3eadc;
+
+    font-size: 1.3rem;
+}
+
+
+/* Sidebar images */
 
 .content-sidebar img {
-  width: 100%;          /* fills sidebar width */
-  height: auto;         /* maintains aspect ratio */
-  max-height: 250px;    /* ✅ set your preferred maximum height */
-  object-fit: cover;    /* crops slightly instead of stretching */
-  border-radius: 8px;   /* optional: matches your rounded style */
-  display: block;
-  margin: 0 auto 1rem;  /* centers and spaces images */
+    width: 100%;
+    height: auto;
+    max-height: 250px;
+
+    object-fit: cover;
+
+    display: block;
+
+    margin: 0 auto 1rem;
+
+    border-radius: 6px;
 }
 
-/* Center the main page layout */
-.layout-container {
-  max-width: 1200px;      /* or whatever width looks good — try 800–1000px */
-  margin: 0 auto;        /* centers it horizontally */
-  padding: 0 1rem;       /* optional: adds breathing room on smaller screens */
-  box-sizing: border-box;
+
+/* Sidebar article cards */
+
+.article-card {
+    display: block;
+
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+
+    border-bottom: 1px solid #3b4566;
 }
 
-/* ==========================
-   CLEANUP IMAGES
-   ========================== */
+.article-card:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
 
+    border-bottom: none;
+}
+
+.article-card h3 {
+    margin: 0.5rem 0 0;
+
+    color: #c7a883;
+
+    font-size: 1rem;
+
+    text-align: left;
+}
+
+.article-card:hover h3 {
+    color: #e5c98e;
+}
+
+
+/* =========================================================
+   ARTICLE TAGS
+   ========================================================= */
+
+.tags {
+    max-width: 800px;
+
+    margin: 2rem auto;
+
+    text-align: center;
+}
+
+.tag {
+    display: inline-block;
+
+    margin: 0.25rem;
+    padding: 0.35rem 0.75rem;
+
+    background: #171d32;
+
+    border: 1px solid #3b4566;
+    border-radius: 20px;
+
+    color: #c7a883;
+
+    font-size: 0.8rem;
+}
+
+.tag:hover {
+    border-color: #7865a8;
+    color: #e5c98e;
+}
 

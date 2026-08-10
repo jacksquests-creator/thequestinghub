@@ -1,60 +1,234 @@
-/* ==========================
+/* =========================================================
+   THE QUESTING HUB
    GLOBAL STYLES
-   ========================== */
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   COLOUR SYSTEM
+   ---------------------------------------------------------
+   Midnight Blue   #0b1020  - Main background
+   Deep Blue       #11172a  - Secondary surfaces
+   Panel Blue      #171d32  - Article panels
+   Purple          #7865a8  - Primary accent
+   Gold/Parchment  #c7a883  - Editorial accent
+   Cream           #f3eadc  - Headings
+   Body Text       #e8e1d5  - Main text
+   Muted Text      #aaa6a0  - Secondary text
+   Border          #3b4566  - Subtle borders
+   --------------------------------------------------------- */
+
+
+/* =========================================================
+   RESET / BASE
+   ========================================================= */
+
+html {
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #0b1020;
+}
 
 body {
-  font-family: 'Cinzel', sans-serif;
-  background: #0b0c10;
-  color: #e5d9f2;
-  margin: 0;
-  padding: 0;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Cinzel', sans-serif;
+
+    background:
+        radial-gradient(
+            circle at 15% 10%,
+            rgba(120, 101, 168, 0.12),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 85% 80%,
+            rgba(74, 60, 110, 0.10),
+            transparent 35%
+        ),
+        #0b1020;
+
+    color: #e8e1d5;
 }
 
-html, body {
-  height: 100%;
-  margin: 0;
+
+/* =========================================================
+   TYPOGRAPHY
+   ========================================================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #f3eadc;
+    margin: 1.5em auto 0.5em;
+    line-height: 1.3;
+
+    text-shadow: none;
 }
 
-/* Typography */
-h1, h2, h3, h4 {
-  text-align: center;
-  margin: 1.5em auto 0.5em;
-  color: #f8f1e9;
-  text-shadow: 2px 2px #3d348b;
+h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
 }
 
-p, ul, ol, li {
-  text-align: left;
+h2 {
+    font-size: clamp(1.5rem, 3vw, 2.2rem);
 }
 
-/* Links */
+h3 {
+    font-size: clamp(1.25rem, 2.5vw, 1.7rem);
+}
+
+h4 {
+    font-size: 1.2rem;
+    color: #c7a883;
+}
+
+h5 {
+    color: #c7a883;
+}
+
+p,
+ul,
+ol,
+li {
+    text-align: left;
+}
+
+p {
+    line-height: 1.75;
+}
+
+strong {
+    color: #f3eadc;
+}
+
+em {
+    color: #ded5c8;
+}
+
+
+/* =========================================================
+   LINKS
+   ========================================================= */
+
 a {
-  color: #45a29e;
-  text-decoration: none;
-}
-a:hover {
-  color: #f8f1e9;
-}
-a:visited {
-  color: #b294ff;
+    color: #c7a883;
+    text-decoration: none;
+
+    transition:
+        color 0.2s ease,
+        text-shadow 0.2s ease;
 }
 
-/* Media */
-img, video {
-  display: block;
-  max-width: 100%;
-  height: auto;
-  margin: auto;
-  border-radius: 8px;
+a:hover {
+    color: #e5c98e;
+
+    text-shadow:
+        0 0 8px rgba(199, 168, 131, 0.25);
+}
+
+a:visited {
+    color: #a98fcf;
+}
+
+
+/* =========================================================
+   LISTS
+   ========================================================= */
+
+ul,
+ol {
+    padding-left: 1.5rem;
+    margin: 1rem 0 1.5rem;
+}
+
+li {
+    margin-bottom: 0.45rem;
+    line-height: 1.6;
+}
+
+li::marker {
+    color: #7865a8;
+}
+
+
+/* =========================================================
+   MEDIA
+   ========================================================= */
+
+img,
+video {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+
+    border-radius: 8px;
 }
 
 figure {
-  text-align: center;
-  margin: 1.5em auto;
+    text-align: center;
+    margin: 2rem auto;
 }
+
 figcaption {
-  font-size: 0.9em;
-  color: grey;
-  margin-top: 0.5em;
-  font-style: italic;
+    margin-top: 0.6rem;
+
+    font-size: 0.85rem;
+    line-height: 1.5;
+
+    color: #aaa6a0;
+    font-style: italic;
+}
+
+
+/* =========================================================
+   HORIZONTAL RULES
+   ========================================================= */
+
+hr {
+    border: 0;
+    border-top: 1px solid #3b4566;
+    margin: 2rem auto;
+}
+
+.image-line {
+    max-width: 85%;
+    border-top: 1px solid #7865a8;
+}
+
+
+/* =========================================================
+   SELECTION
+   ========================================================= */
+
+::selection {
+    background: #7865a8;
+    color: #f3eadc;
+}
+
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0b1020;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #3b4566;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #7865a8;
 }
