@@ -501,7 +501,11 @@
 
     margin-right: 6px;
 
-    padding: 0.3rem 0.65rem;
+    padding: 3px 10px;
+
+    line-height: 1.2;
+
+    height: auto;
 
     background: #11172a;
 
