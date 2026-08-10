@@ -488,6 +488,12 @@
     bottom: 0.75rem;
     left: 0.75rem;
 
+        padding: 3px 10px;
+
+    line-height: 1.2;
+
+    height: auto;
+
     margin: 0;
 
     z-index: 2;
@@ -500,12 +506,6 @@
     display: inline-block;
 
     margin-right: 6px;
-
-    padding: 3px 10px;
-
-    line-height: 1.2;
-
-    height: auto;
 
     background: #11172a;
 
