@@ -497,7 +497,7 @@
     gap: 0.4rem;
 
     /* Prevent child .tag elements stretching vertically */
-    align-items: flex-end;
+    align-items: flex-end; 3effa73da1ee37b6195b67ec0d88c9279bdca084
 }
 
 
