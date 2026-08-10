@@ -430,6 +430,9 @@
 
     padding-right: 0.5rem;
 
+    /* Reserve room at the bottom so absolutely-positioned .tags don't overlap content */
+    padding-bottom: 2.5rem;
+
     box-sizing: border-box;
 }
 
@@ -484,59 +487,36 @@
 
 .article .tags {
     position: absolute;
-
     bottom: 0.75rem;
     left: 0.75rem;
-
-
     margin: 0;
-
     z-index: 2;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
 }
 
 
-/* Individual tag */
+/* Individual tag — keep visuals centralised in article.css; article-scoped overrides only */
 
 .article .tag {
-    display: inline-block;
-
-    margin-right: 6px;
-
-    background: #11172a;
-
-    color: #c7a883;
-
-    border: 1px solid #7865a8;
-
-    border-radius: 20px;
-
-    font-size: 0.75rem;
-
-    font-weight: 500;
-
-    text-decoration: none;
+    /* Keep lightweight layout/weight overrides here; base visuals live in article.css */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 
     opacity: 0.95;
+    font-weight: 500;
 
-    transition:
-        background 0.2s ease,
-        color 0.2s ease,
-        border-color 0.2s ease;
+    /* Transition and visual styles are defined on the global .tag in article.css */
 }
 
 
-/* Tag hover */
+/* Tag hover — keep only state overrides that are layout-specific */
 
 .article .tag:hover {
-    background: #7865a8;
-
-    color: #f3eadc;
-
-    border-color: #c7a883;
-
     opacity: 1;
-
-    text-shadow: none;
 }
 
 
@@ -672,7 +652,7 @@
     /* Article text */
 
     .article .card-text {
-        padding: 0.5rem 0.5rem 2rem;
+        padding: 0.5rem 0.5rem 3rem; /* increase bottom padding on small screens to avoid overlap */
     }
 
 

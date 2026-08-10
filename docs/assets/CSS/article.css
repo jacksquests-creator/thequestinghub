@@ -506,24 +506,5 @@
     text-align: center;
 }
 
-.tag {
-    display: inline-block;
-
-    margin: 0.25rem;
-    padding: 0.35rem 0.75rem;
-
-    background: #171d32;
-
-    border: 1px solid #3b4566;
-    border-radius: 20px;
-
-    color: #c7a883;
-
-    font-size: 0.8rem;
-}
-
-.tag:hover {
-    border-color: #7865a8;
-    color: #e5c98e;
-}
+/* Tag styles moved to global.css so all pages receive a consistent appearance. */
 
