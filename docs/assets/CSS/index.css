@@ -485,7 +485,7 @@
    ARTICLE TAGS
    ========================================================= */
 
-.article .tags {
+.article .tags .tag{
     position: absolute;
     bottom: 0.75rem;
     left: 0.75rem;
@@ -512,19 +512,6 @@
     opacity: 1;
 }
 
-.article .tags .tag {
-    display: inline-block;
-
-    padding: 0.2rem 0.5rem;
-
-    background: #3b4566;
-    border: 1px solid #7865a8;
-    border-radius: 4px;
-
-    color: #e8e1d5;
-
-    font-size: 0.75rem;
-}
 
 
 
