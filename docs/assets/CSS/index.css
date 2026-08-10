@@ -497,31 +497,20 @@
     gap: 0.4rem;
 
     /* Prevent child .tag elements stretching vertically */
-    align-items: flex-end; 3effa73da1ee37b6195b67ec0d88c9279bdca084
-}
-
-
-/* Individual tag — keep visuals centralised in article.css; article-scoped overrides only */
-
-.article .tag {
-    /* Keep lightweight layout/weight overrides here; base visuals live in article.css */
+    align-items: flex-end;
+        /* Keep lightweight layout/weight overrides here; base visuals live in article.css */
     display: inline-flex;
     align-items: center;
     justify-content: center;
 
     /* Ensure tags do not stretch to fill the container height */
-    align-self: center;
-    height: auto;
+    align-self: bottom;
+    height: 10px;
 
     opacity: 0.95;
     font-weight: 500;
-
-    /* Transition and visual styles are defined on the global .tag in article.css */
+ 
 }
-
-
-/* Tag hover — keep only state overrides that are layout-specific */
-
 .article .tag:hover {
     opacity: 1;
 }
