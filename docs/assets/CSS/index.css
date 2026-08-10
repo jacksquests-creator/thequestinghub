@@ -494,18 +494,13 @@
 
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-start;
     gap: 0.4rem;
 
-    /* Prevent child .tag elements stretching vertically */
-    align-items: flex-end;
-        /* Keep lightweight layout/weight overrides here; base visuals live in article.css */
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
 
-    /* Ensure tags do not stretch to fill the container height */
-    align-self: bottom;
-    height: 10px;
+
+    height: auto;
 
     opacity: 0.95;
     font-weight: 500;
