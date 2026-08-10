@@ -485,7 +485,7 @@
    ARTICLE TAGS
    ========================================================= */
 
-.article .tags .tag{
+.article .tags{
     position: absolute;
     bottom: 0.75rem;
     left: 0.75rem;
@@ -510,6 +510,11 @@
 }
 .article .tag:hover {
     opacity: 1;
+}
+
+.tag {
+     height: 20.32px;
+    width: 60.73px;
 }
 
 
