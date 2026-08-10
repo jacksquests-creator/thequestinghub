@@ -512,7 +512,7 @@
     opacity: 1;
 }
 
-.tag {
+.tag a{
      height: 20.32px;
     width: 60.73px;
 }
