@@ -512,6 +512,29 @@
     opacity: 1;
 }
 
+.tag {
+     position: absolute;
+    bottom: 0.75rem;
+    left: 0.75rem;
+    margin: 0;
+    z-index: 2;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    text-align: bottom;
+
+
+
+    height: 25.32px;
+    width: 68.73px;
+
+    opacity: 0.95;
+    font-weight: 500;
+}
+
 
 
 
