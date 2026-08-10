@@ -510,6 +510,12 @@
     opacity: 1;
 }
 
+.tags a {
+    position: absolute;
+    bottom: 0.75rem;
+    left: 0.75rem;
+}
+
 
 /* =========================================================
    RESPONSIVE — TABLET
