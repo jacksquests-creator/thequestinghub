@@ -16,12 +16,12 @@
     "tags": ["reviews"]
   },
   {
-    "title": "Deploying on Netlify",
-    "description": "How to get this whole thing online in minutes.",
-    "image": "images/article3.jpg",
-    "link": "articles/article3.html",
-    "date" : "2024-10-04",
-    "tags": ["features"]
+    "title": "Runescape: Dragonwilds Early Access Review",
+    "description": "A review of Jagex's new game.",
+    "image": "/assets/images/dragonwilds-images/dragonwilds-cover-art.webp",
+    "link": "/posts/reviews/review-articles/runescape-dragonwilds-early-access-review.html",
+    "date" : "2026-08-21",
+    "tags": ["reviews"]
   }
   
 
